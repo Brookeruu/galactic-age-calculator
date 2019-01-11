@@ -64,5 +64,9 @@ describe ('AgeCalculator', function() {
     expect(ageEarthIsLeapYear.totalMillisecondsAlive()).toEqual(469152000000)
   })
 
+  it('should calculate number miliseconds in a Mercury year', function() {
+    expect(ageEarth.ageMercury()).toEqual(true);
+    expect(ageEarthNotLeapYear.ageMercury()).toEqual(false);
+  })
 
 });
