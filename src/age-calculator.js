@@ -56,4 +56,16 @@ export class AgeCalculator {
     }
   }
 
+  ageVenus() {
+    const venusYearMilliSecs = 19565310240;
+    let totalMillisecondsAlive = this.totalMillisecondsAlive();
+    let ageVenus = Math.floor(totalMillisecondsAlive / venusYearMilliSecs)
+
+    if (this.isInputValid() === true) {
+        return ageVenus;
+    } else {
+      return false;
+    }
+  }
+
 } //closes class

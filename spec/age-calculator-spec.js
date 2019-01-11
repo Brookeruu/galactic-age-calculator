@@ -72,8 +72,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should calculate number miliseconds in a Venus year', function() {
-    expect(ageEarth.ageVenus()).toEqual(127);
-    expect(ageEarthIsLeapYear.ageVenus()).toEqual(61);
-    expect(ageEarthNotLeapYear.ageVenus()).toEqual(492);
-
+    expect(ageEarth.ageVenus()).toEqual(49);
+    expect(ageEarthIsLeapYear.ageVenus()).toEqual(23);
+    expect(ageEarthNotLeapYear.ageVenus()).toEqual(190);
+  });
 });
