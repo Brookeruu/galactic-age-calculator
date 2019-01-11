@@ -6,6 +6,7 @@ export class AgeCalculator {
   }
 
   isLeapYear() {
+
     if (this.yearIput % 4 === 0 && this.yearIput % 100 !== 0) {
       return true;
     } else if (this.yearIput % 100 === 0 && this.yearIput % 400 === 0) {
@@ -30,5 +31,16 @@ export class AgeCalculator {
     }
   }
 
+  numberDaysAlive() {
+    let today = new Date();
+    let birthdate = new Date(this.yearIput, (this.monthInput-1), this.dayInput)
+
+    let totalDays = Math.floor(((today - birthdate) / (60*60*24*1000)));
+    return totalDays;
+  }
 
 } //closes class
+
+
+// let todayDate = new Date();
+// let birthdate = new Date(this.yearInput, (this.monthInput -1), this.dayInput);

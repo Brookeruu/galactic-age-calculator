@@ -55,7 +55,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should calculate number of days between birthdate and today, the # days alive', function(){
-    expect(ageEarth.numberDaysAlive()).toEqual(3000);
+    expect(ageEarth.numberDaysAlive()).toEqual(11204);
+    expect(ageEarthIsLeapYear.numberDaysAlive()).toEqual(5430)
   });
 
 
