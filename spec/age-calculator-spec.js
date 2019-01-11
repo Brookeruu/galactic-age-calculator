@@ -3,12 +3,20 @@ import { AgeCalculator } from '../src/age-calculator.js';
 describe ('AgeCalculator', function() {
   let ageEarth;
   let ageEarthNotLeapYear;
+  let ageEarthIsLeapYear;
+  let badAgeEarth;
+  let badAgeEarthNotLeapYear;
+
 
   beforeEach(function () {
     ageEarth = new AgeCalculator(
                 5,
                 9,
                 1988);
+    badAgeEarth = new AgeCalculator(
+                5,
+                49,
+                1900);
     ageEarthNotLeapYear = new AgeCalculator(
                 10,
                 10,
@@ -17,6 +25,10 @@ describe ('AgeCalculator', function() {
                 2,
                 29,
                 2004);
+    badAgeEarthNotLeapYear = new AgeCalculator(
+                2,
+                29,
+                2100);
   });
 
   it('should take in a birthday month, day, year and return it', function() {
@@ -27,6 +39,7 @@ describe ('AgeCalculator', function() {
 
   it('should check validity of input date', function(){
     expect(ageEarth.isInputValid()).toEqual(true);
+    expect(badAgeEarth.isInputValid()).toEqual(false);
   });
 
   it('should check if input year is a leap year', function(){
@@ -35,8 +48,10 @@ describe ('AgeCalculator', function() {
 
   });
 
-  it('should check if input birthdate valid, accounting for leap years', function() {
+  it('should check if input 2-29-Year birthdate valid, accounting for leap years', function(){
     expect(ageEarthIsLeapYear.isInputValid()).toEqual(true);
+    expect(badAgeEarthNotLeapYear.isInputValid()).toEqual(false);
+
   });
 
   //
