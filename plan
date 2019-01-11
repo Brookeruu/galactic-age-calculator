@@ -7,10 +7,15 @@
   * Create object w/ only property : age
   * Create a method to calculate life expectancy
   * Create method for each planet to calculate solar age:
-    * Mercury = .24
+    * Mercury = .24 EY
     * Venus = .62
     * Mars = 1.88
     * Jupiter = 11.86
+
+      * using input age: calculate # of earth days total for # of earth years up to today's date
+      * calculate # of earth days in 1 other planet year
+      * divide total earth days by # earth days in x-planet's year
+
 
 3. Integration
   * Initial routes or index pages with all dependencies in Controller/index.html head

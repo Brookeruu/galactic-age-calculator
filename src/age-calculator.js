@@ -1,6 +1,8 @@
 export class AgeCalculator {
-  constructor(ageEarth) {
-    this.ageEarth = ageEarth;
+  constructor(monthInput, dayInput, yearIput) {
+    this.monthInput = monthInput;
+    this.dayInput = dayInput;
+    this.yearIput = yearIput;
   }
 
   earthAge() {
