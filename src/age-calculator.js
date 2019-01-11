@@ -5,7 +5,19 @@ export class AgeCalculator {
     this.yearIput = yearIput;
   }
 
-  earthAge() {
-    return this.ageEarth;
+  isInputValid() {
+    const daysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
+
+    if (this.monthInput >= 1 && this.monthInput <= 12) {
+      if (this.dayInput >= 1 && this.monthInput <= daysInMonth[this.monthInput - 1]) {
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      return false;
+    }
   }
-}
+
+
+} //closes class

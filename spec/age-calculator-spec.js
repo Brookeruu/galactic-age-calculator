@@ -4,7 +4,10 @@ describe ('AgeCalculator', function() {
   let ageEarth;
 
   beforeEach(function () {
-    ageEarth = new AgeCalculator(5,9,1988);
+    ageEarth = new AgeCalculator(
+                5,
+                9,
+                1988);
   });
 
   it('should take in a birthday month, day, year and return it', function() {
