@@ -19,5 +19,14 @@ export class AgeCalculator {
     }
   }
 
+  isLeapYear() {
+    if (this.yearIput % 4 === 0 && this.yearIput % 100 !== 0) {
+      return true;
+    } else if (this.yearIput % 100 === 0 && this.yearIput % 400 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
 } //closes class
