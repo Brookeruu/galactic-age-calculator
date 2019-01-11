@@ -28,7 +28,7 @@ describe ('AgeCalculator', function() {
     badAgeEarthNotLeapYear = new AgeCalculator(
                 2,
                 29,
-                2100);
+                1700);
   });
 
   it('should take in a birthday month, day, year and return it', function() {
@@ -39,6 +39,7 @@ describe ('AgeCalculator', function() {
 
   it('should check validity of input date', function(){
     expect(ageEarth.isInputValid()).toEqual(true);
+    console.log(ageEarth);
     expect(badAgeEarth.isInputValid()).toEqual(false);
   });
 
@@ -51,8 +52,13 @@ describe ('AgeCalculator', function() {
   it('should check if input 2-29-Year birthdate valid, accounting for leap years', function(){
     expect(ageEarthIsLeapYear.isInputValid()).toEqual(true);
     expect(badAgeEarthNotLeapYear.isInputValid()).toEqual(false);
-
   });
+
+  it('should calculate number of days between birthdate and today, the # days alive', function(){
+    expect(ageEarth.numberDaysAlive()).toEqual(3000);
+  });
+
+
 
   //
   // it('should calculate the number to days on earth from birthday to current date', function() {
