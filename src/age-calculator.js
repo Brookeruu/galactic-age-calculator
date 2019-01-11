@@ -59,10 +59,22 @@ export class AgeCalculator {
   ageVenus() {
     const venusYearMilliSecs = 19565310240;
     let totalMillisecondsAlive = this.totalMillisecondsAlive();
-    let ageVenus = Math.floor(totalMillisecondsAlive / venusYearMilliSecs)
+    let ageVenus = Math.floor(totalMillisecondsAlive / venusYearMilliSecs);
 
     if (this.isInputValid() === true) {
         return ageVenus;
+    } else {
+      return false;
+    }
+  }
+
+  ageMars() {
+    const marsYearMilliSecs = 59327069760;
+    let totalMillisecondsAlive = this.totalMillisecondsAlive();
+    let ageMars = Math.floor(totalMillisecondsAlive / marsYearMilliSecs);
+
+    if (this.isInputValid() === true) {
+        return ageMars;
     } else {
       return false;
     }
