@@ -92,7 +92,10 @@ describe ('AgeCalculator', function() {
     expect(ageEarthNotLeapYear.ageJupiter()).toEqual(9);
     expect(badAgeEarthNotLeapYear.ageJupiter()).toEqual(false);
     expect(badAgeEarth.ageJupiter()).toEqual(false);
-
   });
+
+  it('should calculate years left of life expectency left', function() {
+    expect(ageEarth.lifeExpectancy()).toEqual("years left");
+  })
 
 });
