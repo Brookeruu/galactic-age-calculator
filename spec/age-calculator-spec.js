@@ -76,4 +76,11 @@ describe ('AgeCalculator', function() {
     expect(ageEarthIsLeapYear.ageVenus()).toEqual(23);
     expect(ageEarthNotLeapYear.ageVenus()).toEqual(190);
   });
+
+  it('should calculate age in a Mars year', function() {
+    expect(ageEarth.ageMars()).toEqual(49);
+    expect(ageEarthIsLeapYear.ageMars()).toEqual(23);
+    expect(ageEarthNotLeapYear.ageMars()).toEqual(190);
+  });
+
 });
