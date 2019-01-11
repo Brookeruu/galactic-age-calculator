@@ -65,13 +65,13 @@ describe ('AgeCalculator', function() {
     expect(ageEarthNotLeapYear.totalMillisecondsAlive()).toEqual(3731788800000);
   });
 
-  it('should calculate number miliseconds in a Mercury year', function() {
+  it('should calculate age in a Mercury year', function() {
     expect(ageEarth.ageMercury()).toEqual(127);
     expect(ageEarthIsLeapYear.ageMercury()).toEqual(61);
     expect(ageEarthNotLeapYear.ageMercury()).toEqual(492);
   });
 
-  it('should calculate number miliseconds in a Venus year', function() {
+  it('should calculate age in a Venus year', function() {
     expect(ageEarth.ageVenus()).toEqual(49);
     expect(ageEarthIsLeapYear.ageVenus()).toEqual(23);
     expect(ageEarthNotLeapYear.ageVenus()).toEqual(190);
