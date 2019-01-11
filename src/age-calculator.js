@@ -80,4 +80,18 @@ export class AgeCalculator {
     }
   }
 
+  ageJupiter() {
+    const jupiterYearMilliSecs = 374265450720;
+    let totalMillisecondsAlive = this.totalMillisecondsAlive();
+    let ageJupiter = Math.floor(totalMillisecondsAlive / jupiterYearMilliSecs);
+
+    if (this.isInputValid() === true) {
+        return ageJupiter;
+    } else {
+      return false;
+    }
+  }
+
+
+
 } //closes class

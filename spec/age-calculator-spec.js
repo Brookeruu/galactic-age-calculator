@@ -65,23 +65,34 @@ describe ('AgeCalculator', function() {
     expect(ageEarthNotLeapYear.totalMillisecondsAlive()).toEqual(3731788800000);
   });
 
-  it('should calculate age in a Mercury year', function() {
+  it('should calculate age in Mercury years', function() {
     expect(ageEarth.ageMercury()).toEqual(127);
     expect(ageEarthIsLeapYear.ageMercury()).toEqual(61);
     expect(ageEarthNotLeapYear.ageMercury()).toEqual(492);
+    expect(badAgeEarth.ageMercury()).toEqual(false);
   });
 
-  it('should calculate age in a Venus year', function() {
+  it('should calculate age in Venus years', function() {
     expect(ageEarth.ageVenus()).toEqual(49);
     expect(ageEarthIsLeapYear.ageVenus()).toEqual(23);
     expect(ageEarthNotLeapYear.ageVenus()).toEqual(190);
+    expect(badAgeEarth.ageVenus()).toEqual(false);
   });
 
-  it('should calculate age in a Mars year', function() {
+  it('should calculate age in Mars years', function() {
     expect(ageEarth.ageMars()).toEqual(16);
     expect(ageEarthIsLeapYear.ageMars()).toEqual(7);
     expect(ageEarthNotLeapYear.ageMars()).toEqual(62);
     expect(badAgeEarthNotLeapYear.ageMars()).toEqual(false);
+  });
+
+  it('should calculate age in Jupiter years', function() {
+    expect(ageEarth.ageJupiter()).toEqual(2);
+    expect(ageEarthIsLeapYear.ageJupiter()).toEqual(1);
+    expect(ageEarthNotLeapYear.ageJupiter()).toEqual(9);
+    expect(badAgeEarthNotLeapYear.ageJupiter()).toEqual(false);
+    expect(badAgeEarth.ageJupiter()).toEqual(false);
+
   });
 
 });
