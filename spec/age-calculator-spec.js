@@ -13,7 +13,10 @@ describe ('AgeCalculator', function() {
                 10,
                 10,
                 1900);
-
+    ageEarthIsLeapYear = new AgeCalculator(
+                2,
+                29,
+                2004);
   });
 
   it('should take in a birthday month, day, year and return it', function() {
@@ -24,13 +27,17 @@ describe ('AgeCalculator', function() {
 
   it('should check validity of input date', function(){
     expect(ageEarth.isInputValid()).toEqual(true);
-  })
+  });
 
   it('should check if input year is a leap year', function(){
     expect(ageEarth.isLeapYear()).toEqual(true);
     expect(ageEarthNotLeapYear.isLeapYear()).toEqual(false);
 
-  })
+  });
+
+  it('should check if input birthdate valid, accounting for leap years', function() {
+    expect(ageEarthIsLeapYear.isInputValid()).toEqual(true);
+  });
 
   //
   // it('should calculate the number to days on earth from birthday to current date', function() {
