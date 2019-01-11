@@ -59,11 +59,10 @@ describe ('AgeCalculator', function() {
     expect(ageEarthIsLeapYear.numberDaysAlive()).toEqual(5430)
   });
 
+  it('should return total milliseconds birthdate - today', function() {
+    expect(ageEarth.numberDaysAlive()).toEqual(11204);
+    expect(ageEarthIsLeapYear.numberDaysAlive()).toEqual(5430)
+  })
 
-
-  //
-  // it('should calculate the number to days on earth from birthday to current date', function() {
-  //   expect(ageEarth.totalEarthDays()).toEqual()
-  // })
 
 });
