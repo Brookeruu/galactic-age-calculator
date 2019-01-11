@@ -13,6 +13,13 @@ describe ('AgeCalculator', function() {
     expect(ageEarth.yearIput).toEqual(1988);
   });
 
-  // it('should calculate ')
+  it('should check validity of input date', function(){
+    expect(ageEarth.isInputValid()).toEqual(true);
+  })
+
+  //
+  // it('should calculate the number to days on earth from birthday to current date', function() {
+  //   expect(ageEarth.totalEarthDays()).toEqual()
+  // })
 
 });
