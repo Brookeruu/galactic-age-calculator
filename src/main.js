@@ -6,6 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 $(document).ready(function() {
 
-  $ write eventlistnere here
+  // $ write eventlistnere here
 
 });
