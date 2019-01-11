@@ -63,12 +63,17 @@ describe ('AgeCalculator', function() {
     expect(ageEarth.totalMillisecondsAlive()).toEqual(968025600000);
     expect(ageEarthIsLeapYear.totalMillisecondsAlive()).toEqual(469152000000);
     expect(ageEarthNotLeapYear.totalMillisecondsAlive()).toEqual(3731788800000);
-  })
+  });
 
   it('should calculate number miliseconds in a Mercury year', function() {
     expect(ageEarth.ageMercury()).toEqual(127);
     expect(ageEarthIsLeapYear.ageMercury()).toEqual(61);
     expect(ageEarthNotLeapYear.ageMercury()).toEqual(492);
-  })
+  });
+
+  it('should calculate number miliseconds in a Venus year', function() {
+    expect(ageEarth.ageVenus()).toEqual(127);
+    expect(ageEarthIsLeapYear.ageVenus()).toEqual(61);
+    expect(ageEarthNotLeapYear.ageVenus()).toEqual(492);
 
 });
