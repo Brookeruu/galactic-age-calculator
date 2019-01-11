@@ -60,8 +60,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should return total milliseconds birthdate - today', function() {
-    expect(ageEarth.numberDaysAlive()).toEqual(11204);
-    expect(ageEarthIsLeapYear.numberDaysAlive()).toEqual(5430)
+    expect(ageEarth.totalMillisecondsAlive()).toEqual(968025600000);
+    expect(ageEarthIsLeapYear.totalMillisecondsAlive()).toEqual(469152000000)
   })
 
 

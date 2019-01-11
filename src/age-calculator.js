@@ -36,11 +36,18 @@ export class AgeCalculator {
     let birthdate = new Date(this.yearIput, (this.monthInput-1), this.dayInput)
 
     let totalDays = Math.floor(((today - birthdate) / (60*60*24*1000)));
+
     return totalDays;
   }
 
+  totalMillisecondsAlive() {
+    let totalMilliseconds = this.numberDaysAlive() * (60*60*24*1000);
+
+    return totalMilliseconds;
+  }
+
+  ageMercury() {
+
+  }
+
 } //closes class
-
-
-// let todayDate = new Date();
-// let birthdate = new Date(this.yearInput, (this.monthInput -1), this.dayInput);
