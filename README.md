@@ -1,4 +1,4 @@
-####Super Galactic Age Calculator
+#### Super Galactic Age Calculator
 
 #### By Brooke Perry
 
