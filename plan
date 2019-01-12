@@ -18,6 +18,8 @@
 
       * account for leap years for input age total earth days
 
+      site for stats: https://www.cdc.gov/nchs/data/nvsr/nvsr67/nvsr67_05.pdf 
+
 
 3. Integration
   * Initial routes or index pages with all dependencies in Controller/index.html head
