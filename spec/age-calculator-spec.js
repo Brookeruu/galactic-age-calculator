@@ -59,7 +59,7 @@ describe ('AgeCalculator', function() {
     expect(ageEarthIsLeapYear.numberDaysAlive()).toEqual(5430)
   });
 
-  it('should return total milliseconds birthdate - today', function() {
+  it('should return total milliseconds birthdate through today', function() {
     expect(ageEarth.totalMillisecondsAlive()).toEqual(968025600000);
     expect(ageEarthIsLeapYear.totalMillisecondsAlive()).toEqual(469152000000);
     expect(ageEarthNotLeapYear.totalMillisecondsAlive()).toEqual(3731788800000);
@@ -94,8 +94,9 @@ describe ('AgeCalculator', function() {
     expect(badAgeEarth.ageJupiter()).toEqual(false);
   });
 
-  it('should calculate years left of life expectency left', function() {
-    expect(ageEarth.lifeExpectancy()).toEqual("years left");
+  it('should return an array of numbers, one for each planet, with the amount of years left before reaching ', function() {
+    expect(ageEarth.lifeExpectancy()).toEqual([ 47, 199, 77, 25, '4.04' ]);
+    expect(ageEarthNotLeapYear.lifeExpectancy()).toEqual([-40, -166, -64, -22, '-3.34' ]);
   })
 
 });

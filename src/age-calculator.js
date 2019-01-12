@@ -35,7 +35,6 @@ export class AgeCalculator {
     let today = new Date();
     let birthdate = new Date(this.yearIput, (this.monthInput-1), this.dayInput)
     let totalDays = Math.floor(((today - birthdate) / (60*60*24*1000)));
-
     return totalDays;
   }
 
@@ -90,6 +89,25 @@ export class AgeCalculator {
     } else {
       return false;
     }
+  }
+
+  lifeExpectancy() {
+    const lifeExpectancyAvg = 2480376427200; //78.6 Earth Years
+    // const lifeExpectancyMale = 2401484047200; // 76.1 Earth Years
+    // const lifeExpectancyFemale = 2559268807200; // 81.1 Earth Years
+    let totalMilliSecsLeft = (lifeExpectancyAvg - this.totalMillisecondsAlive());
+
+
+    let earthTimeLeft = Math.floor((totalMilliSecsLeft / 31556952000));
+    let mercuryTimeLeft =  Math.floor((totalMilliSecsLeft / 7573668480));
+    let venusTimeLeft =  Math.floor((totalMilliSecsLeft / 19565310240));
+    let marsTimeLeft =  Math.floor((totalMilliSecsLeft / 59327069760));
+    let jupiterTimeLeft =  ((totalMilliSecsLeft / 374265450720)).toFixed(2);
+
+
+    let timeLeftAllPlanets = [earthTimeLeft, mercuryTimeLeft, venusTimeLeft, marsTimeLeft, jupiterTimeLeft];
+
+    return timeLeftAllPlanets;
   }
 
 
