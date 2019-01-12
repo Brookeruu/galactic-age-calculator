@@ -12,11 +12,11 @@ $ git clone
 ```
 
 * Navigate into the directory and use command
-  ```
-  $ npm install
-  $ ./node_modules/.bin/jasmine init
-  $ karma init
-  ```
+```
+$ npm install
+$ ./node_modules/.bin/jasmine init
+$ karma init
+```
 * To open the application in Chrome, use command
 ```
 $ npm run start
@@ -28,7 +28,7 @@ $ npm test
 
 ## Known Bugs
 
-* There are no known bugs at this time.
+* The user input birthdate can be.
 
 ## Support and contact details
 
