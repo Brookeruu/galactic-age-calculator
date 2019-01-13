@@ -72,6 +72,12 @@ describe ('AgeCalculator', function() {
     expect(futureAge.ageVenus()).toEqual(false);
   });
 
+  it('should calculate age in Mars years', function() {
+    expect(ageEarth.ageMars()).toEqual(49);
+    expect(badAgeEarth.ageMars()).toEqual(191);
+    expect(futureAge.ageMars()).toEqual(false);
+  });
+
 
   // it('should take in a birthday month, day, year and return it', function() {
   //   expect(ageEarth.monthInput).toEqual(5);
