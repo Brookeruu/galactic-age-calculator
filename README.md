@@ -1,10 +1,10 @@
-#### Super Galactic Age Calculator
+## Super Galactic Age Calculator
 
-#### By Brooke Perry
+##### By Brooke Perry
 
-## This app allows a user to enter their birthdate and returns their age and life expectancy for Mercury, Venus, Earth, Mars, and Jupiter, based on its solar year.
+#### This app allows a user to enter their birthdate and returns their age and life expectancy for Mercury, Venus, Earth, Mars, and Jupiter, based on its solar year.
 
-## Setup/Installation Requirements
+#### Setup/Installation Requirements
 
 * In the command line, clone this repository with
 ```
@@ -28,7 +28,7 @@ $ npm test
 
 ## Known Bugs
 
-* The user input birthdate can be.
+* No known bugs at this time.
 
 ## Support and contact details
 
