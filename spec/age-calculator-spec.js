@@ -37,8 +37,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should return how many milliseconds between birthdate and today date', function() {
-    expect(ageEarth.totalMilliSecsAlive()).toEqual('968029200000');
-    expect(badAgeEarth.totalMilliSecsAlive()).toEqual('3741638400000');
+    expect(ageEarth.totalMilliSecsAlive()).toEqual(968115600000);
+    expect(badAgeEarth.totalMilliSecsAlive()).toEqual(3741638400000);
     console.log(badAgeEarth);
     console.log(ageEarth);
     console.log(testDate);
