@@ -46,6 +46,10 @@ describe ('AgeCalculator', function() {
     expect(badAgeEarth.totalEarthDays()).toEqual(43306);
   });
 
+  it('should return number earth years alive and number days into current birthday year', function() {
+    expect(ageEarth.ageEarth()).toEqual('a number');
+    expect(badAgeEarth.ageEarth()).toEqual('another number');
+  });
 
   // it('should take in a birthday month, day, year and return it', function() {
   //   expect(ageEarth.monthInput).toEqual(5);
