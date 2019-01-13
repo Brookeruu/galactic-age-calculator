@@ -60,7 +60,7 @@ export class AgeCalculator {
   ageJupiter() {
     const jupiterYearMilliSecs = 374265450720;
     let totalMilliSecsAlive = this.totalMilliSecsAlive();
-    let ageJupiter = Math.float(totalMilliSecsAlive / jupiterYearMilliSecs);
+    let ageJupiter = ((this.totalMilliSecsAlive() / 374265450720)).toFixed(1);
 
     if (this.isValid() === true) {
         return ageJupiter;

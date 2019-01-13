@@ -78,6 +78,12 @@ describe ('AgeCalculator', function() {
     expect(futureAge.ageMars()).toEqual(false);
   });
 
+  it('should calculate age in Jupiter years', function() {
+    expect(ageEarth.ageJupiter()).toEqual('2.6');
+    expect(badAgeEarth.ageJupiter()).toEqual('10.0');
+    expect(futureAge.ageJupiter()).toEqual(false);
+  });
+
 
   // it('should take in a birthday month, day, year and return it', function() {
   //   expect(ageEarth.monthInput).toEqual(5);
