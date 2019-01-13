@@ -4,46 +4,6 @@ export class AgeCalculator {
     this.today = today;
   }
 
-  // constructor(today, birthdate) {
-  //   this.today = today;
-  //   this.birthdate = birthdate;
-  // }
-  //
-  // var userage = new AgeCalculator(new Date(), new Date(user  birthday))
-
-  // isLeapYear() {
-  //   if (this.yearIput % 4 === 0 && this.yearIput % 100 !== 0) {
-  //     return true;
-  //   } else if (this.yearIput % 100 === 0 && this.yearIput % 400 === 0) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  //
-  // isValid() {
-  //   const daysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
-  //
-  //   if (this.month >= 1 && this.month <= 12) {
-  //     if (this.day >= 1 && this.day <= daysInMonth[this.month -1]) {
-  //       return true;
-  //     } else if (this.isLeapYear() === true && this.month === 2 && this.day === 29) {
-  //       return true;
-  //     } else {
-  //       return false;
-  //     }
-  //   } else {
-  //     return false;
-  //   }
-  // }
-  //
-  // // numberDaysAlive() {
-  // //   let today = new Date();
-  // //   let birthdate = new Date(this.yearIput, (this.month-1), this.day)
-  // //   let totalDays = Math.floor(((today - birthdate) / (60*60*24*1000)));
-  // //   return totalDays;
-  // // }
-
   numberDaysAlive(today, birthdate) {
     // let today = new Date();
     // let birthdate = new Date(this.yearIput, (this.month-1), this.day)
@@ -64,11 +24,13 @@ export class AgeCalculator {
     return totalMilliSecs;
   }
 
+  totalEarthDays() {}
+
 
   ageMercury() {
     const mercuryYearMilliSecs = 7573668480;
-    let totalMillisecondsAlive = this.totalMillisecondsAlive();
-    let mercuryAge = Math.floor(totalMillisecondsAlive / mercuryYearMilliSecs);
+    let totalMilliSecsAlive = this.totalMilliSecsAlive();
+    let mercuryAge = Math.floor(totalMilliSecsAlive / mercuryYearMilliSecs);
 
     if (this.isValid() === true) {
         return mercuryAge;
@@ -79,8 +41,8 @@ export class AgeCalculator {
 
   ageVenus() {
     const venusYearMilliSecs = 19565310240;
-    let totalMillisecondsAlive = this.totalMillisecondsAlive();
-    let ageVenus = Math.floor(totalMillisecondsAlive / venusYearMilliSecs);
+    let totalMilliSecsAlive = this.totalMilliSecsAlive();
+    let ageVenus = Math.floor(totalMilliSecsAlive / venusYearMilliSecs);
 
     if (this.isValid() === true) {
         return ageVenus;
@@ -91,8 +53,8 @@ export class AgeCalculator {
 
   ageMars() {
     const marsYearMilliSecs = 59327069760;
-    let totalMillisecondsAlive = this.totalMillisecondsAlive();
-    let ageMars = Math.floor(totalMillisecondsAlive / marsYearMilliSecs);
+    let totalMilliSecsAlive = this.totalMilliSecsAlive();
+    let ageMars = Math.floor(totalMilliSecsAlive / marsYearMilliSecs);
 
     if (this.isValid() === true) {
         return ageMars;
@@ -103,8 +65,8 @@ export class AgeCalculator {
 
   ageJupiter() {
     const jupiterYearMilliSecs = 374265450720;
-    let totalMillisecondsAlive = this.totalMillisecondsAlive();
-    let ageJupiter = Math.floor(totalMillisecondsAlive / jupiterYearMilliSecs);
+    let totalMilliSecsAlive = this.totalMilliSecsAlive();
+    let ageJupiter = Math.floor(totalMilliSecsAlive / jupiterYearMilliSecs);
 
     if (this.isValid() === true) {
         return ageJupiter;
@@ -117,7 +79,7 @@ export class AgeCalculator {
     const lifeExpectancyAvg = 2480376427200; //78.6 Earth Years
     // const lifeExpectancyMale = 2401484047200; // 76.1 Earth Years
     // const lifeExpectancyFemale = 2559268807200; // 81.1 Earth Years
-    let totalMilliSecsLeft = (lifeExpectancyAvg - this.totalMillisecondsAlive());
+    let totalMilliSecsLeft = (lifeExpectancyAvg - this.totalMilliSecsAlive());
 
 
     let earthTimeLeft = Math.floor((totalMilliSecsLeft / 31556952000));

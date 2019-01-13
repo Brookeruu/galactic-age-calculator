@@ -39,11 +39,13 @@ describe ('AgeCalculator', function() {
   it('should return how many milliseconds between birthdate and today date', function() {
     expect(ageEarth.totalMilliSecsAlive()).toEqual(968115600000);
     expect(badAgeEarth.totalMilliSecsAlive()).toEqual(3741638400000);
-    console.log(badAgeEarth);
-    console.log(ageEarth);
-    console.log(testDate);
-
   });
+
+  it('should return number earth years alive', function() {
+    expect(ageEarth.totalEarthDays()).toEqual('a number');
+    expect(badAgeEarth.totalEarthDays()).toEqual('another number');
+  });
+
 
   // it('should take in a birthday month, day, year and return it', function() {
   //   expect(ageEarth.monthInput).toEqual(5);
