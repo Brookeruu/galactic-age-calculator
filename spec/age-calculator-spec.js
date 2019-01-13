@@ -9,7 +9,6 @@ describe ('AgeCalculator', function() {
   let oldBday = new Date(1900, 5, 19, 0,0,0);
   let futureBday = new Date(2050, 10, 22, 0,0,0);
 
-
   beforeEach(function () {
     myAge = new AgeCalculator(myBday,testDate);
     oldAge = new AgeCalculator(oldBday,testDate);

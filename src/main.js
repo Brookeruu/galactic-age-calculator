@@ -10,7 +10,6 @@ $(document).ready(function() {
   $('#bday-form').submit(function(event) {
     event.preventDefault();
 
-
   let month = ((parseInt($('#inputMonth').val()))-1);
   let day = parseInt($('#inputDay').val());
   let year = parseInt($('#inputYear').val());
@@ -19,7 +18,6 @@ $(document).ready(function() {
 
   let ageCalc = new AgeCalculator(birthdate, today);
 
-  // $('output-bday').text(((ageCalc.birthdate()).toDateString()));
   $('#output-bday').text(ageCalc.birthdate.toDateString());
 
   $('#earth-years').text(ageCalc.ageEarth());
