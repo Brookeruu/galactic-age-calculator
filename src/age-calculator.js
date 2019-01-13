@@ -4,13 +4,7 @@ export class AgeCalculator {
     this.today = today;
   }
 
-  // numberDaysAlive(today, birthdate) {
-  //   // let today = new Date();
-  //   // let birthdate = new Date(this.yearIput, (this.month-1), this.day)
-  //   let totalDays = Math.floor(((this.today - this.birthdate) / (60*60*24*1000)));
-  //   return totalDays;
-  // }
-  validInput() {
+  isValid() {
     if (this.birthdate > this.today) {
       return false;
     } else {
@@ -34,10 +28,8 @@ export class AgeCalculator {
   }
 
   ageMercury() {
-    const mercuryYearMilliSecs = 7573668480;
-    let totalMilliSecsAlive = this.totalMilliSecsAlive();
-    let mercuryAge = Math.floor(totalMilliSecsAlive / mercuryYearMilliSecs);
-
+  let mercuryAge = Math.floor((this.totalMilliSecsAlive() / 7573668480))
+        //7573668480 milliseconds in 1 Mercury solar year
     if (this.isValid() === true) {
         return mercuryAge;
     } else {
@@ -46,9 +38,7 @@ export class AgeCalculator {
   }
 
   ageVenus() {
-    const venusYearMilliSecs = 19565310240;
-    let totalMilliSecsAlive = this.totalMilliSecsAlive();
-    let ageVenus = Math.floor(totalMilliSecsAlive / venusYearMilliSecs);
+    let ageVenus = Math.floor((this.totalMilliSecsAlive() / 19565310240));
 
     if (this.isValid() === true) {
         return ageVenus;

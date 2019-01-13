@@ -55,15 +55,21 @@ describe ('AgeCalculator', function() {
   });
 
   it('should return false if input age is greater than today', function() {
-    expect(ageEarth.validInput()).toEqual(true);
-    expect(badAgeEarth.validInput()).toEqual(true);
-    expect(futureAge.validInput()).toEqual(false);
+    expect(ageEarth.isValid()).toEqual(true);
+    expect(badAgeEarth.isValid()).toEqual(true);
+    expect(futureAge.isValid()).toEqual(false);
   });
 
   it('should calculate age in Mercury years', function() {
-    expect(ageEarth.ageMercury()).toEqual(true);
-    expect(badAgeEarth.ageMercury()).toEqual(true);
+    expect(ageEarth.ageMercury()).toEqual(127);
+    expect(badAgeEarth.ageMercury()).toEqual(494);
     expect(futureAge.ageMercury()).toEqual(false);
+  });
+
+  it('should calculate age in Venus years', function() {
+    expect(ageEarth.ageVenus()).toEqual(49);
+    expect(badAgeEarth.ageVenus()).toEqual(191);
+    expect(futureAge.ageVenus()).toEqual(false);
   });
 
 
