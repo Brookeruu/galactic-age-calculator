@@ -42,8 +42,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should return number earth years alive', function() {
-    expect(ageEarth.totalEarthDays()).toEqual('a number');
-    expect(badAgeEarth.totalEarthDays()).toEqual('another number');
+    expect(ageEarth.totalEarthDays()).toEqual(11205);
+    expect(badAgeEarth.totalEarthDays()).toEqual(43306);
   });
 
 

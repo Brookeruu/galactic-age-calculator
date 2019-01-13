@@ -24,7 +24,11 @@ export class AgeCalculator {
     return totalMilliSecs;
   }
 
-  totalEarthDays() {}
+  
+  totalEarthDays() {
+    let totalEarthDays = Math.floor((this.totalMilliSecsAlive() / 86400000))
+    return totalEarthDays;
+  }
 
 
   ageMercury() {
