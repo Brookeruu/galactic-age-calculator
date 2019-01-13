@@ -4,20 +4,19 @@ export class AgeCalculator {
     this.today = today;
   }
 
-  numberDaysAlive(today, birthdate) {
-    // let today = new Date();
-    // let birthdate = new Date(this.yearIput, (this.month-1), this.day)
-    let totalDays = Math.floor(((this.today - this.birthdate) / (60*60*24*1000)));
-    return totalDays;
-  }
-  //
-  // numberDaysAlive(new Date(1/03/19),new Date(this.yearIput, (this.month-1), this.day))
-  //
-
-  // totalMillisecondsAlive() {
-  //   let totalMilliseconds = this.numberDaysAlive() * (60*60*24*1000);
-  //   return totalMilliseconds;
+  // numberDaysAlive(today, birthdate) {
+  //   // let today = new Date();
+  //   // let birthdate = new Date(this.yearIput, (this.month-1), this.day)
+  //   let totalDays = Math.floor(((this.today - this.birthdate) / (60*60*24*1000)));
+  //   return totalDays;
   // }
+  validInput() {
+    if (this.birthdate > this.today) {
+      return false;
+    } else {
+     return true;
+    }
+  }
 
   totalMilliSecsAlive() {
     let totalMilliSecs = (this.today - this.birthdate);

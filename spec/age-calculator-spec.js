@@ -10,6 +10,7 @@ describe ('AgeCalculator', function() {
   let myBday = new Date(1988, 4, 9, 0,0,0);
   let oldBday = new Date(1900, 5, 19, 0,0,0);
   let futureBday = new Date(2050, 10, 22, 0,0,0);
+  let futureAge;
 
 
   beforeEach(function () {
@@ -54,9 +55,9 @@ describe ('AgeCalculator', function() {
   });
 
   it('should return false if input age is greater than today', function() {
-    expect(ageEarth.ageEarth()).toEqual(true);
-    expect(badAgeEarth.ageEarth()).toEqual(true);
-    expect(badAgeEarth.ageEarth()).toEqual(true);
+    expect(ageEarth.validInput()).toEqual(true);
+    expect(badAgeEarth.validInput()).toEqual(true);
+    expect(futureAge.validInput()).toEqual(false);
   });
 
   // it('should take in a birthday month, day, year and return it', function() {
