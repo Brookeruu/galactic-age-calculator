@@ -73,8 +73,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should calculate age in Mars years', function() {
-    expect(ageEarth.ageMars()).toEqual(49);
-    expect(badAgeEarth.ageMars()).toEqual(191);
+    expect(ageEarth.ageMars()).toEqual(16);
+    expect(badAgeEarth.ageMars()).toEqual(63);
     expect(futureAge.ageMars()).toEqual(false);
   });
 

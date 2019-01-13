@@ -48,9 +48,7 @@ export class AgeCalculator {
   }
 
   ageMars() {
-    const marsYearMilliSecs = 59327069760;
-    let totalMilliSecsAlive = this.totalMilliSecsAlive();
-    let ageMars = Math.floor(totalMilliSecsAlive / marsYearMilliSecs);
+    let ageMars = Math.floor((this.totalMilliSecsAlive() / 59327069760));
 
     if (this.isValid() === true) {
         return ageMars;
@@ -62,7 +60,7 @@ export class AgeCalculator {
   ageJupiter() {
     const jupiterYearMilliSecs = 374265450720;
     let totalMilliSecsAlive = this.totalMilliSecsAlive();
-    let ageJupiter = Math.floor(totalMilliSecsAlive / jupiterYearMilliSecs);
+    let ageJupiter = Math.float(totalMilliSecsAlive / jupiterYearMilliSecs);
 
     if (this.isValid() === true) {
         return ageJupiter;
