@@ -6,20 +6,14 @@ describe ('AgeCalculator', function() {
   let ageEarthIsLeapYear;
   let badAgeEarth;
   let badAgeEarthNotLeapYear;
-  let testDate = new Date(2019, 0, 12);
+  let testDate = new Date(2019, 0, 12, 0,0,0);
+  let myBday = new Date(1988, 4, 9, 0,0,0);
+  let oldBday = new Date(1900, 5, 19, 0,0,0);
 
 
   beforeEach(function () {
-    ageEarth = new AgeCalculator(
-                5,
-                9,
-                1988,
-                testDate);
-    badAgeEarth = new AgeCalculator(
-                5,
-                49,
-                1900,
-                testDate);
+    ageEarth = new AgeCalculator(myBday,testDate);
+    badAgeEarth = new AgeCalculator(oldBday,testDate);
     // ageEarthNotLeapYear = new AgeCalculator(
     //             10,
     //             10,
@@ -35,16 +29,19 @@ describe ('AgeCalculator', function() {
   });
 
   it('should take in a birthday month, day, year and return it', function() {
-    expect(badAgeEarth.birthdate.toDateString()).toEqual('Mon May 09 1988');
-    expect(badAgeEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
-    expect(badAgeEarth.birthdate.toDateString()).toEqual('Mon Jun 18 1900');
+    expect(ageEarth.birthdate.toDateString()).toEqual('Mon May 09 1988');
+    expect(ageEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
+    expect(badAgeEarth.birthdate.toDateString()).toEqual('Tue Jun 19 1900');
     expect(badAgeEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
 
   });
 
   it('should return how many milliseconds between birthdate and today date', function() {
-    expect(ageEarth.birthdate.toDateString()).toEqual('Mon May 09 1988');
-    expect(ageEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
+    expect(ageEarth.totalMilliSecsAlive()).toEqual('968029200000');
+    expect(badAgeEarth.totalMilliSecsAlive()).toEqual('3741638400000');
+    console.log(badAgeEarth);
+    console.log(ageEarth);
+    console.log(testDate);
 
   });
 
