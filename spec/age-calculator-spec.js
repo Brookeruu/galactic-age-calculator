@@ -9,11 +9,13 @@ describe ('AgeCalculator', function() {
   let testDate = new Date(2019, 0, 12, 0,0,0);
   let myBday = new Date(1988, 4, 9, 0,0,0);
   let oldBday = new Date(1900, 5, 19, 0,0,0);
+  let futureBday = new Date(2050, 10, 22, 0,0,0);
 
 
   beforeEach(function () {
     ageEarth = new AgeCalculator(myBday,testDate);
     badAgeEarth = new AgeCalculator(oldBday,testDate);
+    futureAge = new AgeCalculator(futureBday,testDate);
     // ageEarthNotLeapYear = new AgeCalculator(
     //             10,
     //             10,
@@ -47,8 +49,14 @@ describe ('AgeCalculator', function() {
   });
 
   it('should return number earth years alive and number days into current birthday year', function() {
-    expect(ageEarth.ageEarth()).toEqual('a number');
-    expect(badAgeEarth.ageEarth()).toEqual('another number');
+    expect(ageEarth.ageEarth()).toEqual(30);
+    expect(badAgeEarth.ageEarth()).toEqual(118);
+  });
+
+  it('should return false if input age is greater than today', function() {
+    expect(ageEarth.ageEarth()).toEqual(true);
+    expect(badAgeEarth.ageEarth()).toEqual(true);
+    expect(badAgeEarth.ageEarth()).toEqual(true);
   });
 
   // it('should take in a birthday month, day, year and return it', function() {
