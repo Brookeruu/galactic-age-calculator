@@ -35,6 +35,14 @@ describe ('AgeCalculator', function() {
   });
 
   it('should take in a birthday month, day, year and return it', function() {
+    expect(badAgeEarth.birthdate.toDateString()).toEqual('Mon May 09 1988');
+    expect(badAgeEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
+    expect(badAgeEarth.birthdate.toDateString()).toEqual('Mon Jun 18 1900');
+    expect(badAgeEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
+
+  });
+
+  it('should return how many milliseconds between birthdate and today date', function() {
     expect(ageEarth.birthdate.toDateString()).toEqual('Mon May 09 1988');
     expect(ageEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
 
