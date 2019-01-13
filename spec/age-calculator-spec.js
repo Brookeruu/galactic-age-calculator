@@ -60,6 +60,13 @@ describe ('AgeCalculator', function() {
     expect(futureAge.validInput()).toEqual(false);
   });
 
+  it('should calculate age in Mercury years', function() {
+    expect(ageEarth.ageMercury()).toEqual(true);
+    expect(badAgeEarth.ageMercury()).toEqual(true);
+    expect(futureAge.ageMercury()).toEqual(false);
+  });
+
+
   // it('should take in a birthday month, day, year and return it', function() {
   //   expect(ageEarth.monthInput).toEqual(5);
   //   expect(ageEarth.dayInput).toEqual(9);
