@@ -26,6 +26,8 @@ $ npm run start
 $ npm test
 ```
 
+![galactic-age-app](/images/galactic-age-app.png)
+
 ## Known Bugs
 
 * No known bugs at this time.
@@ -36,7 +38,7 @@ If you have any questions or issues, please contact perrysbrooke@gmail.com or fe
 
 ## Technologies Used
 
-Javascript, Node, npm, Jasmine, Karma, HTML, CSS, Git, Bootstrap, jQuery, webpack, Popper, ESLint, Uglify, and Style-Loader.
+Javascript, Node, npm, Jasmine, Karma, HTML, CSS, Git, Bootstrap, jQuery, webpack, Popper, ESLint, Uglify, Babel, and Style-Loader.
 
 ### License
 
