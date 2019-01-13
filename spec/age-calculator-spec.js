@@ -35,8 +35,8 @@ describe ('AgeCalculator', function() {
   });
 
   it('should take in a birthday month, day, year and return it', function() {
-    expect(ageEarth.birthdate.toDateString()).toEqual('a date');
-    expect(ageEarth.today.toDateString()).toEqual('a date');
+    expect(ageEarth.birthdate.toDateString()).toEqual('Mon May 09 1988');
+    expect(ageEarth.today.toDateString()).toEqual('Sat Jan 12 2019');
 
   });
 
