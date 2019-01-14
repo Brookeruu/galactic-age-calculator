@@ -27,12 +27,12 @@ describe ('AgeCalculator', function() {
     expect(oldAge.totalMilliSecsAlive()).toEqual(3741638400000);
   });
 
-  it('should return number earth years alive', function() {
+  it('should return number earth days alive', function() {
     expect(myAge.totalEarthDays()).toEqual(11205);
     expect(oldAge.totalEarthDays()).toEqual(43306);
   });
 
-  it('should return number earth years alive and number days into current birthday year', function() {
+  it('should return number earth years alive', function() {
     expect(myAge.ageEarth()).toEqual(30);
     expect(oldAge.ageEarth()).toEqual(118);
   });
