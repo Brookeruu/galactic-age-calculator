@@ -11,9 +11,9 @@
 
     <div class="input-form">
       <form class="form-inline" id="bday-form">
-        <input type="number" id="inputMonth" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Month">
-        <input type="number" id="inputDay" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Day">
-        <input type="number" id="inputYear" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Year (YYYY)">
+        <input type="number" id="inputMonth" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Month" required>
+        <input type="number" id="inputDay" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Day" required>
+        <input type="number" id="inputYear" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Year (YYYY)" required>
         <button type="submit" class="btn btn-primary" name="button">Submit</button>
       </form>
     </div>
@@ -54,6 +54,10 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="invalid-input text-white" id="invalid-input">
+      <h4>Please enter a valid birthday!</h4>
     </div>
 
   </div>

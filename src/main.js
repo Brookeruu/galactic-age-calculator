@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 $(document).ready(function() {
 
   $('#results').hide();
+  $('#invalid-input').hide();
   $('#bday-form').submit(function(event) {
     event.preventDefault();
 
@@ -28,12 +29,17 @@ $(document).ready(function() {
   $('#results').show();
 
   let lifeExpect = ageCalc.lifeExpectancy();
-  console.log(lifeExpect);
+
   $("#earth-expectancy").text((`${lifeExpect[0]} more years`));
   $("#mercury-expectancy").text((`${lifeExpect[1]} more years`));
   $("#venus-expectancy").text((`${lifeExpect[2]} more years`));
   $("#mars-expectancy").text((`${lifeExpect[3]} more years`));
   $("#jupiter-expectancy").text((`${lifeExpect[4]} more years`));
+
+  if (ageCalc.isValid() === false) {
+    $('#results').hide();
+    $('#invalid-input').show();
+  }
 
   });
 });

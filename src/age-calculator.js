@@ -24,7 +24,11 @@ export class AgeCalculator {
 
   ageEarth() {
     let ageEarth = Math.floor((this.totalEarthDays() / 365));
-    return ageEarth;
+      if (this.isValid() === true) {
+          return ageEarth;
+      } else {
+        return false;
+      }
   }
 
   ageMercury() {
